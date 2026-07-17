@@ -1,16 +1,35 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background:#faf8f5;
+    color:#333;
+}
+
 * {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    height: 80px;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 5px solid rgb(206, 108, 108);
+header{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+
+    height:80px;
+
+    background:white;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+    border-bottom:3px solid #d3b17d;
 }
 
 .logo {
@@ -22,7 +41,7 @@ header {
 }
 
 .logohome {
-    height: 60px;
+    height: 70px;
 }
 
 .navbar {
@@ -30,17 +49,23 @@ header {
     justify-content: space-evenly;
 }
 
-.navbar a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: rgb(0, 1, 61);
-    font-weight: 700;
-    padding: 0 20px;
-    border-bottom: 5px solid rgb(255, 255, 255);
+.navbar a{
+    text-decoration:none;
+    color:#1b365d;
+
+    font-weight:600;
+
+    padding:28px 18px;
+
+    transition:.3s;
 }
 
-.navbar a:hover {
-    border-bottom: 2px solid rgb(206, 108, 108);
+.navbar a:hover{
+
+    color:#9c6b30;
+
+    border-bottom:3px solid #9c6b30;
+
 }
 
 .actionbar {
@@ -55,19 +80,120 @@ header {
     align-items: center;
 }
 
-.map_container {
+/* .map_container {
     display: flex;
     justify-content: space-evenly;
     padding: 20px 0;
     background-color: antiquewhite;
     flex-wrap: wrap;
     flex-direction: row;
+} */
+
+.hero{
+
+    height:90vh;
+
+    background: linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.55)
+),
+
+    url(images/vaishali-hero.jpeg);
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
 }
 
-.text {
-    
-    margin-left: 50px;
+.hero h1{
+    color:white;
 }
+
+.hero h2{
+    color:white;
+}
+
+.hero p{
+    color:white;
+}
+
+.hero-content{
+
+    flex:1;
+
+}
+
+.hero-content h1{
+
+    color:#ffffff;
+
+    font-size:3.5rem;
+
+}
+
+.hero-content h2{
+
+    margin:15px 0;
+
+    font-weight:500;
+
+}
+
+.hero-content p{
+
+    line-height:1.8;
+
+    margin:25px 0;
+
+}
+.hero-btn{
+
+    display:inline-block;
+
+    background:#123458;
+
+    color:white;
+
+    padding:14px 28px;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+.hero-btn:hover{
+
+    background:#7b5b2f;
+
+}
+
+.hero h1,
+.hero h2,
+.hero p{
+    text-shadow:0 2px 8px rgba(0,0,0,.5);
+}
+
+.hero-image img{
+
+    width:500px;
+
+    border-radius:12px;
+
+}
+
 .images {
     justify-content: space-between;
     
@@ -83,14 +209,56 @@ header {
     margin-right: 0;
 }
 
-.sec {
-    display: flex;
-    margin: 30px 50px;
+.sec{
+    display:flex;
+    margin:30px 50px;
+    align-items:flex-start;
 }
 
-.img {
-    height: 300px;
-    margin-left: 30px;
+.img{
+
+    width:350px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    margin-right: 10px;
+
+}
+.img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.image{
+    margin-left:40px;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.place{
+
+    background:white;
+
+    padding:18px;
+
+    margin:22px 0;
+
+    border-radius:10px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    margin-bottom:20px;
+}
+
+.place:hover{
+
+    transform:translateY(-4px);
+
 }
 
 .firsttext {
@@ -104,19 +272,13 @@ header {
     text-align: justify;
     line-height: 1.6;
     color: rgb(0, 0, 0);
+    margin-left: 50px;
+    flex:1;
 }
 
-ol {
-    padding-left: 20px;
-}
 
 ul {
     padding-left: 20px;
-}
-
-footer {
-    height: 250px;
-    background-color: rgb(240, 240, 240);
 }
 
 .column {
@@ -130,11 +292,74 @@ footer {
     line-height: 1.7;
 }
 
-h3 {
-    color: rgb(1, 24, 54);
-    text-transform: uppercase;
+h2,h3{
+
+    color:#123458;
+
+    margin-bottom:18px;
+
 }
 
 h4 {
     color: black;
+}
+
+.story-section{
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+
+    url(images/village.png);
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:white;
+
+    text-align:center;
+
+    padding:100px 15%;
+
+}
+
+.story-section h2{
+    color: #ffffff;
+    margin-bottom:20px;
+}
+
+.story-section p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.overlay{
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+footer{
+
+    background:#4e3c4b;
+
+    color:white;
+
+    padding:20px;
+
+    text-align:center;
+
+    line-height:2;
+
+}
+
+
+section {
+    scroll-margin-top: 110px;
 }
